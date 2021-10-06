@@ -1,8 +1,8 @@
 from PIL import Image
-
+#photo one
 img1 = Image.open("first_ph.png")
 pixels1 = img1.load()
-
+#photo two
 img2 = Image.open("second_ph.png")
 pixels2 = img2.load()
 
@@ -15,4 +15,5 @@ for row in range(img1.size[1]):
             (pixels1[col,row][0]+pixels2[col,row][0])%256,
             (pixels1[col,row][1]+pixels2[col,row][1])%256,
             (pixels1[col,row][2]+pixels2[col,row][2])%256)
+#out_put
 flag.save("output.png")
